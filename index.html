@@ -124,19 +124,6 @@
       transform: translateY(-2px);
     }
     
-    .nav a.btn.primary {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: white;
-      border: none;
-      box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
-    }
-    
-    .nav a.btn.primary:hover {
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(139, 92, 246, 0.5);
-    }
-    
     .navlinks {
       display: flex; 
       gap: 40px; 
@@ -465,7 +452,7 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      background: linear-gradient(90px, transparent, var(--border), transparent);
     }
     
     /* How it Works Moderne */
@@ -631,7 +618,6 @@
     .price ul {
       list-style: none;
       margin: 24px 0;
-      space-y: 8px;
     }
     
     .price ul li {
@@ -650,12 +636,6 @@
       color: var(--success);
       font-weight: 800;
       font-size: 16px;
-    }
-    
-    .price .btn {
-      width: 100%;
-      justify-content: center;
-      margin-top: 24px;
     }
     
     .badge {
@@ -1109,6 +1089,246 @@
     </div>
   </section>
 
+  <section id="fonctionnalites-detaillees" class="section section-alt">
+    <div class="container">
+      <h2>Découvrez chaque fonctionnalité en détail</h2>
+      <p class="muted" style="font-size: 20px;">
+        Nounouma ne se contente pas de mettre en relation parents et nounous. 
+        C'est un écosystème complet qui accompagne chaque étape de la garde d'enfants.
+      </p>
+      
+      <div class="detailed-features">
+        <div class="detailed-feature">
+          <h3>📍 Recherche et annonces intelligentes</h3>
+          <p>
+            Publiez vos annonces (parent ou nounou) en 2 étapes simples. 
+            Recherche multicritères avec carte interactive, favoris personnalisés et alertes automatiques.
+          </p>
+          <ul>
+            <li>Géolocalisation précise avec rayon personnalisable</li>
+            <li>Filtres par tarifs, horaires, jours de la semaine</li>
+            <li>Types de garde : occasionnel, régulier, vacances scolaires</li>
+            <li>Spécialités : bébés, handicap, aide aux devoirs, animaux</li>
+            <li>Système de favoris avec notifications de nouvelles annonces</li>
+            <li>Annonces "Top-Liste" mises en avant (abonnement Premium)</li>
+          </ul>
+      
+      <h3>3. Vos droits RGPD</h3>
+      <p>
+        Droits d'accès, rectification, effacement, limitation, opposition, portabilité. 
+        Contact : <a href="mailto:support@nounouma.fr">support@nounouma.fr</a>
+      </p>
+    </div>
+  </section>
+
+    <script>
+      // Mise à jour automatique de l'année
+      document.getElementById('year').textContent = new Date().getFullYear();
+      
+      // Gestion du menu mobile
+      function toggleMenu() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuToggle.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        
+        // Empêcher le scroll du body quand le menu est ouvert
+        if (mobileMenu.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      }
+      
+      function closeMenu() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      
+      // Fermer le menu si on clique en dehors
+      document.addEventListener('click', function(event) {
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuToggle = document.querySelector('.menu-toggle');
+        
+        if (mobileMenu.classList.contains('active') && 
+            !mobileMenu.contains(event.target) && 
+            !menuToggle.contains(event.target)) {
+          closeMenu();
+        }
+      });
+      
+      // Fermer le menu sur redimensionnement de la fenêtre
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 980) {
+          closeMenu();
+        }
+      });
+    </script>
+  </footer>
+
+</body>
+</html>
+        </div>
+        
+        <div class="detailed-feature">
+          <h3>💬 Communication avancée</h3>
+          <p>
+            Messagerie moderne avec toutes les fonctionnalités attendues pour une communication fluide et sécurisée.
+          </p>
+          <ul>
+            <li>Chat en temps réel avec indicateurs de lecture</li>
+            <li>Réactions emoji sur les messages</li>
+            <li>Partage de coordonnées téléphoniques sécurisé</li>
+            <li>Notifications push personnalisables</li>
+            <li>Historique des conversations illimité</li>
+            <li>Support technique intégré pour assistance</li>
+          </ul>
+        </div>
+        
+        <div class="detailed-feature">
+          <h3>📱 Cahier de liaison complet</h3>
+          <p>
+            Remplacez le traditionnel cahier papier par un outil numérique riche et interactif.
+          </p>
+          <ul>
+            <li>Suivi détaillé : repas, siestes, changes, activités</li>
+            <li>Photos commentées avec géolocalisation optionnelle</li>
+            <li>Humeur et comportement de l'enfant</li>
+            <li>Médications et soins avec horaires précis</li>
+            <li>Commentaires parents en temps réel</li>
+            <li>Export PDF pour archivage ou partage famille</li>
+            <li>Modification possible 24h après saisie</li>
+          </ul>
+        </div>
+        
+        <div class="detailed-feature">
+          <h3>📄 Projets d'accueil IA</h3>
+          <p>
+            L'intelligence artificielle au service des projets d'accueil personnalisés et des documents administratifs.
+          </p>
+          <ul>
+            <li>Projets d'accueil personnalisés par IA</li>
+            <li>Contrats de travail conformes au droit français</li>
+            <li>Fiches de sécurité pré-remplies</li>
+            <li>Templates modifiables selon vos besoins</li>
+            <li>Signature électronique intégrée</li>
+            <li>Archivage cloud sécurisé</li>
+            <li>Export PDF, Word, ou impression directe</li>
+          </ul>
+        </div>
+        
+        <div class="detailed-feature">
+          <h3>🔒 Sécurité et vérifications</h3>
+          <p>
+            La sécurité de vos enfants est notre priorité absolue avec des systèmes de vérification adaptés.
+          </p>
+          <ul>
+            <li>Vérification d'identité manuelle ou automatisée</li>
+            <li>QR codes uniques pour affectation enfant-nounou</li>
+            <li>Fiches de sécurité avec contacts d'urgence</li>
+            <li>Chiffrement bout-en-bout des communications</li>
+            <li>Conformité RGPD stricte</li>
+            <li>Signalement et modération proactive</li>
+            <li>Profils vérifiés avec badges de confiance</li>
+          </ul>
+        </div>
+        
+        <div class="detailed-feature">
+          <h3>🎯 Fonctionnalités Premium</h3>
+          <p>
+            Des options avancées pour une expérience optimisée et un service prioritaire.
+          </p>
+          <ul>
+            <li>Profil "Top-Liste" mis en avant dans les recherches</li>
+            <li>Badge premium et mise en avant sur la carte</li>
+            <li>Messagerie illimitée et prioritaire</li>
+            <li>Support premium</li>
+            <li>Accès anticipé aux nouvelles fonctionnalités</li>
+            <li>Visibilité maximale de votre profil</li>
+            <li>Statistiques d'engagement détaillées</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="comment-ca-marche" class="section">
+    <div class="container">
+      <h2>Comment fonctionne Nounouma ?</h2>
+      <p style="font-size: 20px; color: var(--text-secondary); margin-bottom: 32px;">
+        Nounouma simplifie chaque étape de la garde d'enfants : de l'inscription jusqu'au suivi quotidien. 
+        Voici le parcours complet qui révolutionne l'expérience parents-nounous.
+      </p>
+
+      <div class="how">
+        <div class="step">
+          <div class="n">1</div>
+          <h3>Inscription & Profil complet</h3>
+          <p>
+            Créez votre compte avec une adresse email. Complétez votre profil avec coordonnées, 
+            disponibilités et pour les nounous : agréments, diplômes. Parents : ajoutez les infos enfants 
+            (nom, date naissance, allergies, contacts urgence).
+          </p>
+        </div>
+        
+        <div class="step">
+          <div class="n">2</div>
+          <h3>Annonces & Recherche intelligente</h3>
+          <p>
+            Publiez votre annonce en quelques étapes ou parcourez les annonces existantes. 
+            Filtres intelligents et carte interactive pour voir qui est disponible près de chez vous. 
+            Système de favoris et alertes automatiques.
+          </p>
+        </div>
+        
+        <div class="step">
+          <div class="n">3</div>
+          <h3>Communication sécurisée</h3>
+          <p>
+            Messagerie intégrée fluide avec réactions, notifications temps réel et partage 
+            sécurisé des coordonnées téléphoniques. Les échanges restent simples et protégés 
+            par chiffrement bout-en-bout.
+          </p>
+        </div>
+        
+        <div class="step">
+          <div class="n">4</div>
+          <h3>Affectation QR Code sécurisée</h3>
+          <p>
+            Les parents créent la fiche enfant. L'app génère un QR code côté nounou, 
+            que le parent scanne pour associer l'enfant à la garde. Validation finale 
+            côté nounou pour garantir la sécurité maximale.
+          </p>
+        </div>
+        
+        <div class="step">
+          <div class="n">5</div>
+          <h3>Projets d'accueil IA</h3>
+          <p>
+            Génération automatique de projets d'accueil personnalisés par IA. 
+            Création de contrats de garde conformes en quelques clics. Fiches de sécurité 
+            avec numéros d'urgence et informations médicales.
+          </p>
+        </div>
+        
+        <div class="step">
+          <div class="n">6</div>
+          <h3>Cahier de liaison enrichi</h3>
+          <p>
+            Suivez la journée de l'enfant en temps réel : repas, siestes, activités, 
+            photos commentées. Les parents réagissent et commentent instantanément 
+            pour un vrai lien de confiance parents-nounou.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="tarifs" class="section section-alt">
     <div class="container">
       <h2>Tarifs transparents</h2>
@@ -1263,7 +1483,126 @@
     </div>
   </section>
 
-  <footer>
+  <!-- Sections légales simplifiées pour l'espace -->
+  <section id="cgu" class="section legal section-alt">
+    <div class="container">
+      <h2>Conditions Générales d'Utilisation (CGU)</h2>
+      <p class="small muted">Dernière mise à jour : 11 septembre 2025 — Version 2.0</p>
+      
+      <h3>1. Objet et champ d'application</h3>
+      <p>
+        Nounouma est un service numérique de mise en relation entre parents cherchant une garde d'enfants 
+        et professionnels/particuliers proposant des services de garde. La plateforme propose également 
+        des outils collaboratifs avancés (cahier de liaison, génération de documents, etc.).
+      </p>
+      
+      <h3>2. Éditeur du service</h3>
+      <p>
+        Nounouma est édité par un micro-entrepreneur indépendant. Les informations légales complètes 
+        (adresse, SIREN/SIRET, coordonnées administratives) sont fournies dans les documents contractuels 
+        et sur les factures. Contact : <a href="mailto:support@nounouma.fr">support@nounouma.fr</a>.
+      </p>
+      
+      <h3>3. Utilisation conforme du service</h3>
+      <ul>
+        <li>Service réservé aux majeurs. Les parents représentent leurs enfants mineurs</li>
+        <li>Interdiction de contenus illicites ou contraires à l'ordre public</li>
+        <li>Respect de la vie privée : diffusion d'images d'enfants avec consentement des parents</li>
+        <li>Informations exactes et tenues à jour obligatoires</li>
+      </ul>
+      
+      <h3>4. Responsabilités</h3>
+      <p>
+        Nounouma agit en qualité d'intermédiaire. La responsabilité des services de garde incombe directement aux nounous. 
+        Les arrangements financiers se font directement entre parents et nounous.
+      </p>
+      
+      <h3>5. Droit applicable</h3>
+      <p>
+        Les présentes CGU sont régies par le droit français. 
+        En cas de litige, compétence exclusive des tribunaux français.
+      </p>
+    </div>
+  </section>
+
+  <section id="cgv" class="section legal">
+    <div class="container">
+      <h2>Conditions Générales de Vente (CGV)</h2>
+      <p class="small muted">Dernière mise à jour : 11 septembre 2025 — Version 2.0</p>
+      
+      <h3>1. Offres et prix</h3>
+      <ul>
+        <li><strong>Contact :</strong> 6,99 € / mois — <strong>Pro :</strong> 9,99 € / mois — <strong>Premium :</strong> 19,99 € / mois</li>
+        <li><strong>Pas de période d'essai gratuite</strong> — activation et facturation immédiates dès la souscription</li>
+        <li>Nounouma ne prélève aucune commission sur les arrangements financiers entre parents et nounous</li>
+      </ul>
+      
+      <h3>2. Modalités de paiement</h3>
+      <ul>
+        <li>Paiement exclusivement par carte bancaire via <strong>Stripe</strong></li>
+        <li>Données bancaires ne transitent jamais par Nounouma (sécurité PCI-DSS)</li>
+        <li>Facturation mensuelle automatique, renouvellement tacite</li>
+      </ul>
+      
+      <h3>3. Résiliation</h3>
+      <p>
+        Résiliation possible à tout moment avec effet à l'échéance. 
+        Support : <a href="mailto:support@nounouma.fr">support@nounouma.fr</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="confidentialite" class="section legal section-alt">
+    <div class="container">
+      <h2>Politique de confidentialité (RGPD)</h2>
+      <p class="small muted">Dernière mise à jour : 11 septembre 2025 — Version 2.0</p>
+      
+      <h3>1. Responsable de traitement</h3>
+      <p>
+        Wajdi Mrabti (micro-entrepreneur), éditeur de Nounouma. 
+        Contact DPO : <a href="mailto:support@nounouma.fr">support@nounouma.fr</a>.
+      </p>
+      
+      <h3>2. Données collectées</h3>
+      <ul>
+        <li>Identification : nom, prénom, email, téléphone, adresse</li>
+        <li>Profil utilisateur : photo, description, expérience, qualifications</li>
+        <li>Communications : messages, photos partagées, commentaires cahier liaison</li>
+        <li>Données techniques : logs, IP, géolocalisation, cookies</li>
+        <li>Données de paiement : traitées exclusivement par Stripe</li>
+      
+	  
+	  
+
+  <section id="contact" class="section" style="margin-top: 100px;">
+    <div class="container grid-2">
+      <div>
+        <h2>Contactez notre équipe</h2>
+        <p class="muted">
+          Une question sur l'application ? Un problème technique ? Besoin d'aide pour votre abonnement ? 
+          Notre équipe support est là pour vous accompagner.
+        </p>
+        
+        <div style="margin: 32px 0;">
+          <p><strong>📧 Email :</strong> <a href="mailto:support@nounouma.fr">support@nounouma.fr</a></p>
+          <p><strong>⏰ Disponibilité :</strong> Lundi → Vendredi, 9h-18h</p>
+          <p><strong>⚡ Délai de réponse :</strong> 24-48h ouvrées (12h pour Premium)</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>🔗 Liens utiles</h3>
+        <div style="display: grid; gap: 16px; margin-top: 20px;">
+          <a href="#aide" class="btn secondary">❓ FAQ / Centre d'aide</a>
+          <a href="#cgu" class="btn secondary">📋 Conditions d'utilisation</a>
+          <a href="#cgv" class="btn secondary">💰 Conditions de vente</a>
+          <a href="#confidentialite" class="btn secondary">🔒 Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="margin-top: 60px;">
     <div class="container footgrid">
       <div>
         <div class="brand" style="margin-bottom: 20px;">
@@ -1282,6 +1621,7 @@
       <div>
         <strong>🚀 Produit</strong>
         <div><a href="#fonctionnalites">Fonctionnalités</a></div>
+        <div><a href="#comment-ca-marche">Comment ça marche</a></div>
         <div><a href="#tarifs">Tarifs</a></div>
         <div><a href="#aide">Centre d'aide</a></div>
       </div>
@@ -1300,56 +1640,4 @@
         <div class="small muted">Réponse sous 24-48h</div>
       </div>
     </div>
-
-    <script>
-      // Mise à jour automatique de l'année
-      document.getElementById('year').textContent = new Date().getFullYear();
-      
-      // Gestion du menu mobile
-      function toggleMenu() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        
-        menuToggle.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        
-        // Empêcher le scroll du body quand le menu est ouvert
-        if (mobileMenu.classList.contains('active')) {
-          document.body.style.overflow = 'hidden';
-        } else {
-          document.body.style.overflow = '';
-        }
-      }
-      
-      function closeMenu() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        
-        menuToggle.classList.remove('active');
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-      
-      // Fermer le menu si on clique en dehors
-      document.addEventListener('click', function(event) {
-        const mobileMenu = document.getElementById('mobileMenu');
-        const menuToggle = document.querySelector('.menu-toggle');
-        
-        if (mobileMenu.classList.contains('active') && 
-            !mobileMenu.contains(event.target) && 
-            !menuToggle.contains(event.target)) {
-          closeMenu();
-        }
-      });
-      
-      // Fermer le menu sur redimensionnement de la fenêtre
-      window.addEventListener('resize', function() {
-        if (window.innerWidth > 980) {
-          closeMenu();
-        }
-      });
-    </script>
-  </footer>
-
-</body>
-</html>
+	  
