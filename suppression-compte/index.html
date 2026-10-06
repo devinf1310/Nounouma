@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suppression de compte — Nounouma</title>
+  <meta name="description" content="Comment supprimer votre compte Nounouma et vos données : depuis l'application, par email ou via la messagerie. Ce qui est effacé, ce qui est conservé, et le délai pour revenir sur votre décision.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nounouma.fr/suppression-compte/">
+
+  <!-- Aucune ressource externe : ni police, ni image, ni script, ni mesure
+       d'audience. Cette page doit s'afficher sans connexion a un compte,
+       depuis n'importe quel reseau et sans JavaScript. -->
+  <style>
+    :root {
+      --peach: #FFB5A7;
+      --peach-light: #FCD5CE;
+      --lavender: #B8C0FF;
+      --lavender-light: #E2E5FF;
+      --mint-dark: #7DCEA0;
+      --sunshine-dark: #F4D35E;
+      --coral: #FF6B6B;
+      --cream: #FFF8F0;
+      --vanilla: #FFFAF0;
+      --soft-pink: #FFE5EC;
+      --text-dark: #2D3748;
+      --text-medium: #4A5568;
+      --text-light: #718096;
+      --radius: 24px;
+      --maxw: 820px;
+      --sans: 'Quicksand', 'Segoe UI', system-ui, -apple-system,
+              'Helvetica Neue', Arial, sans-serif;
+      --titre: 'Baloo 2', 'Segoe UI', system-ui, -apple-system, Arial,
+               sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--cream);
+      color: var(--text-dark);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.7;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    .bandeau {
+      background: linear-gradient(135deg, var(--peach-light), var(--lavender-light));
+      padding: 20px 0;
+    }
+
+    .contenant {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .marque {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--titre);
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--text-dark);
+      text-decoration: none;
+    }
+
+    .marque span[aria-hidden] {
+      display: inline-grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #fff;
+      font-size: 1.2rem;
+    }
+
+    main {
+      max-width: var(--maxw);
+      margin: 32px auto 0;
+      padding: 0 20px 64px;
+    }
+
+    .carte {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: 0 10px 50px rgba(0, 0, 0, .06);
+    }
+
+    h1 {
+      font-family: var(--titre);
+      font-size: 2rem;
+      line-height: 1.25;
+      margin: 0 0 8px;
+    }
+
+    .date {
+      color: var(--text-light);
+      font-size: .95rem;
+      margin: 0 0 28px;
+    }
+
+    h2 {
+      font-family: var(--titre);
+      font-size: 1.3rem;
+      margin: 40px 0 12px;
+      padding-top: 4px;
+      border-top: 2px solid var(--soft-pink);
+    }
+
+    h2:first-of-type { margin-top: 24px; }
+
+    h3 {
+      font-family: var(--titre);
+      font-size: 1.05rem;
+      margin: 24px 0 6px;
+      color: var(--text-medium);
+    }
+
+    p, li { color: var(--text-medium); }
+    p { margin: 0 0 14px; }
+    ul, ol { margin: 0 0 14px; padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    strong { color: var(--text-dark); }
+
+    a { color: var(--coral); }
+    a:hover { text-decoration: none; }
+
+    .etapes {
+      counter-reset: etape;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px;
+    }
+
+    .etapes li {
+      counter-increment: etape;
+      position: relative;
+      padding-left: 44px;
+      margin-bottom: 14px;
+    }
+
+    .etapes li::before {
+      content: counter(etape);
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--lavender-light);
+      color: var(--text-dark);
+      font-family: var(--titre);
+      font-weight: 700;
+    }
+
+    .grille {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin: 0 0 18px;
+    }
+
+    .bloc {
+      border-radius: 18px;
+      padding: 18px 20px;
+      background: var(--vanilla);
+      border: 2px solid var(--soft-pink);
+    }
+
+    .bloc h3 { margin-top: 0; }
+    .bloc :last-child { margin-bottom: 0; }
+    .bloc.efface { border-color: var(--mint-dark); }
+    .bloc.garde { border-color: var(--sunshine-dark); }
+
+    .encadre {
+      background: var(--vanilla);
+      border-left: 4px solid var(--lavender);
+      border-radius: 0 14px 14px 0;
+      padding: 16px 20px;
+      margin: 0 0 18px;
+    }
+
+    .encadre :last-child { margin-bottom: 0; }
+
+    .mot {
+      font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+      background: var(--soft-pink);
+      border-radius: 6px;
+      padding: 1px 7px;
+      color: var(--text-dark);
+      font-weight: 700;
+    }
+
+    footer {
+      background: #fff;
+      border-top: 2px solid var(--soft-pink);
+      padding: 28px 0 40px;
+    }
+
+    footer p { margin: 0 0 10px; font-size: .95rem; }
+
+    .liens-pied a { margin-right: 18px; display: inline-block; }
+
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .carte { padding: 22px 18px; border-radius: 18px; }
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bandeau">
+    <div class="contenant">
+      <a class="marque" href="/"><span aria-hidden="true">&#128118;</span> Nounouma</a>
+    </div>
+  </div>
+
+  <main>
+    <article class="carte">
+
+      <h1>Suppression de compte</h1>
+      <p class="date">Dernière mise à jour : 7 octobre 2026</p>
+
+      <p>
+        Cette page concerne l'application <strong>Nounouma</strong>
+        (<code>com.nounouma.app</code>), éditée par Wajdi Mrabti
+        (micro-entrepreneur). Elle décrit comment demander la suppression de
+        votre compte et des données associées, conformément au RGPD et aux
+        exigences de Google Play. Elle est également reprise dans la section
+        <a href="/#suppression-compte">Suppression compte</a> de la page
+        d'accueil.
+      </p>
+
+      <h2 id="application">Depuis l'application — le plus direct</h2>
+      <p>
+        Vous n'avez besoin de l'accord de personne : la suppression se
+        déclenche depuis votre compte.
+      </p>
+      <ol class="etapes">
+        <li>Ouvrez l'application Nounouma et connectez-vous.</li>
+        <li>Allez dans <strong>Compte</strong>.</li>
+        <li>Appuyez sur <strong>Supprimer mon compte</strong>, en bas de
+          l'écran.</li>
+        <li>Recopiez le mot <span class="mot">SUPPRIMER</span> pour confirmer,
+          puis validez.</li>
+      </ol>
+
+      <h2 id="delai">Trente jours pour changer d'avis</h2>
+      <div class="encadre">
+        <p>
+          Dès la confirmation, votre compte est <strong>masqué</strong> :
+          votre profil et vos annonces ne sont plus visibles des autres
+          utilisateurs. <strong>Rien n'est encore effacé.</strong>
+        </p>
+        <p>
+          L'effacement définitif a lieu <strong>trente jours</strong> plus
+          tard. Un courriel de rappel vous est envoyé
+          <strong>sept jours</strong> avant cette date.
+        </p>
+        <p>
+          Pour annuler : reconnectez-vous simplement à l'application pendant
+          ces trente jours. Un écran vous indique la date d'effacement prévue
+          et vous propose un bouton <strong>Réactiver mon compte</strong>.
+          Tout est restauré.
+        </p>
+      </div>
+      <p>
+        Passé ce délai, l'effacement est <strong>définitif et
+        irréversible</strong> : les données ne peuvent plus être restaurées.
+      </p>
+
+      <h2 id="autres">Autres moyens de demander la suppression</h2>
+      <div class="grille">
+        <div class="bloc">
+          <h3>Par courriel</h3>
+          <p>
+            Écrivez à
+            <a href="mailto:support@nounouma.fr?subject=%5BDemande%20de%20suppression%20de%20compte%5D">support@nounouma.fr</a>
+            avec l'objet
+            <strong>[Demande de suppression de compte]</strong>, depuis
+            l'adresse associée à votre compte.
+          </p>
+          <p>Votre demande est traitée dans un délai de 30 jours.</p>
+        </div>
+        <div class="bloc">
+          <h3>Via la messagerie de l'application</h3>
+          <p>
+            Ouvrez l'application, accédez à la <strong>messagerie</strong> et
+            contactez le <strong>support</strong> pour demander la suppression
+            de votre compte.
+          </p>
+        </div>
+      </div>
+
+      <h2 id="donnees">Ce qui est effacé, ce qui est conservé</h2>
+      <div class="grille">
+        <div class="bloc efface">
+          <h3>Données effacées</h3>
+          <ul>
+            <li>Votre profil, votre photo de profil et votre photo de
+              couverture</li>
+            <li>Vos annonces</li>
+            <li>Vos enfants déclarés, et les enfants que vous gardez</li>
+            <li>Le cahier de liaison de ces enfants, et ses photos</li>
+            <li>Vos projets d'accueil et vos observations du développement</li>
+            <li>Vos conversations et leurs messages</li>
+            <li>Vos favoris, vos recommandations et vos votes</li>
+            <li>Vos codes de rattachement et vos demandes de rattachement</li>
+            <li>Vos notifications</li>
+            <li>Votre abonnement</li>
+            <li>Votre compte de connexion (adresse électronique et mot de
+              passe)</li>
+          </ul>
+        </div>
+        <div class="bloc garde">
+          <h3>Données conservées</h3>
+          <p>
+            <strong>Vos contrats.</strong> Un contrat engage deux parties :
+            l'effacer priverait l'autre de ses archives. Le contrat est donc
+            conservé, mais votre nom et vos coordonnées y sont remplacés par
+            la mention <strong>« Compte supprimé »</strong>.
+          </p>
+          <p>
+            <strong>Pièces comptables.</strong> Si vous avez souscrit un
+            abonnement payant, les justificatifs correspondants sont conservés
+            au titre des obligations comptables et fiscales.
+          </p>
+        </div>
+      </div>
+
+      <h2 id="questions">Une question</h2>
+      <p>
+        Écrivez à
+        <a href="mailto:support@nounouma.fr">support@nounouma.fr</a>. Le détail
+        des traitements figure dans notre
+        <a href="/confidentialite/">politique de confidentialité</a>.
+      </p>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="contenant">
+      <p>
+        Contact :
+        <a href="mailto:support@nounouma.fr">support@nounouma.fr</a>
+      </p>
+      <p class="liens-pied">
+        <a href="/">Accueil</a>
+        <a href="/confidentialite/">Politique de confidentialité</a>
+        <a href="/#cgu">CGU</a>
+        <a href="/#cgv">CGV</a>
+      </p>
+      <p style="color:#718096">© 2026 Nounouma — Tous droits réservés</p>
+    </div>
+  </footer>
+
+</body>
+</html>

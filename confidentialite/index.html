@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Politique de confidentialité — Nounouma</title>
+  <meta name="description" content="Politique de confidentialité de l'application Nounouma : données collectées, vos droits, rédaction de documents par intelligence artificielle, contact.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nounouma.fr/confidentialite/">
+
+  <!-- Aucune ressource externe : ni police, ni image, ni script, ni mesure
+       d'audience. Cette page doit s'afficher sans connexion a un compte,
+       depuis n'importe quel reseau et sans JavaScript. -->
+  <style>
+    :root {
+      --peach: #FFB5A7;
+      --peach-light: #FCD5CE;
+      --lavender: #B8C0FF;
+      --lavender-light: #E2E5FF;
+      --coral: #FF6B6B;
+      --cream: #FFF8F0;
+      --vanilla: #FFFAF0;
+      --soft-pink: #FFE5EC;
+      --text-dark: #2D3748;
+      --text-medium: #4A5568;
+      --text-light: #718096;
+      --radius: 24px;
+      --maxw: 820px;
+      --sans: 'Quicksand', 'Segoe UI', system-ui, -apple-system,
+              'Helvetica Neue', Arial, sans-serif;
+      --titre: 'Baloo 2', 'Segoe UI', system-ui, -apple-system, Arial,
+               sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--cream);
+      color: var(--text-dark);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.7;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    .bandeau {
+      background: linear-gradient(135deg, var(--peach-light), var(--lavender-light));
+      padding: 20px 0;
+    }
+
+    .contenant {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .marque {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--titre);
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--text-dark);
+      text-decoration: none;
+    }
+
+    .marque span[aria-hidden] {
+      display: inline-grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #fff;
+      font-size: 1.2rem;
+    }
+
+    main {
+      max-width: var(--maxw);
+      margin: 32px auto 0;
+      padding: 0 20px 64px;
+    }
+
+    .carte {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: 0 10px 50px rgba(0, 0, 0, .06);
+    }
+
+    h1 {
+      font-family: var(--titre);
+      font-size: 2rem;
+      line-height: 1.25;
+      margin: 0 0 8px;
+    }
+
+    .date {
+      color: var(--text-light);
+      font-size: .95rem;
+      margin: 0 0 28px;
+    }
+
+    h2 {
+      font-family: var(--titre);
+      font-size: 1.3rem;
+      margin: 40px 0 12px;
+      padding-top: 4px;
+      border-top: 2px solid var(--soft-pink);
+    }
+
+    h2:first-of-type { margin-top: 24px; }
+
+    h3 {
+      font-family: var(--titre);
+      font-size: 1.05rem;
+      margin: 24px 0 6px;
+      color: var(--text-medium);
+    }
+
+    p, li { color: var(--text-medium); }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 14px; padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    strong { color: var(--text-dark); }
+
+    a { color: var(--coral); }
+    a:hover { text-decoration: none; }
+
+    .sommaire {
+      background: var(--vanilla);
+      border-radius: 18px;
+      padding: 18px 22px;
+      margin: 0 0 8px;
+    }
+
+    .sommaire p {
+      margin: 0 0 8px;
+      font-family: var(--titre);
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .sommaire ol { margin: 0; padding-left: 22px; }
+
+    .encadre {
+      background: var(--vanilla);
+      border-left: 4px solid var(--lavender);
+      border-radius: 0 14px 14px 0;
+      padding: 16px 20px;
+      margin: 0 0 18px;
+    }
+
+    .encadre p:last-child { margin-bottom: 0; }
+
+    footer {
+      background: #fff;
+      border-top: 2px solid var(--soft-pink);
+      padding: 28px 0 40px;
+    }
+
+    footer p { margin: 0 0 10px; font-size: .95rem; }
+
+    .liens-pied a { margin-right: 18px; display: inline-block; }
+
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .carte { padding: 22px 18px; border-radius: 18px; }
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bandeau">
+    <div class="contenant">
+      <a class="marque" href="/"><span aria-hidden="true">&#128118;</span> Nounouma</a>
+    </div>
+  </div>
+
+  <main>
+    <article class="carte">
+
+      <h1>Politique de confidentialité</h1>
+      <p class="date">Dernière mise à jour : 7 octobre 2026</p>
+
+      <p>
+        La présente politique s'applique à l'application mobile
+        <strong>Nounouma</strong> (<code>com.nounouma.app</code>) et au site
+        <a href="https://nounouma.fr/">nounouma.fr</a>. Elle est également
+        reprise, dans les mêmes termes, dans la section
+        <a href="/#confidentialite">Confidentialité</a> de la page d'accueil.
+      </p>
+
+      <div class="sommaire">
+        <p>Sur cette page</p>
+        <ol>
+          <li><a href="#responsable">Responsable</a></li>
+          <li><a href="#donnees">Données collectées</a></li>
+          <li><a href="#droits">Vos droits</a></li>
+          <li><a href="#ia">Rédaction de documents par intelligence artificielle</a></li>
+          <li><a href="#parents">Information des parents</a></li>
+          <li><a href="#suppression">Suppression de votre compte</a></li>
+        </ol>
+      </div>
+
+      <h2 id="responsable">1. Responsable</h2>
+      <p>
+        Wajdi Mrabti (micro-entrepreneur). DPO :
+        <a href="mailto:support@nounouma.fr">support@nounouma.fr</a>
+      </p>
+
+      <h2 id="donnees">2. Données collectées</h2>
+      <ul>
+        <li>Identification : nom, email, téléphone</li>
+        <li>Profil : photo, description, qualifications</li>
+        <li>Communications : messages, photos</li>
+        <li>Paiement : via Stripe uniquement</li>
+      </ul>
+
+      <h2 id="droits">3. Vos droits</h2>
+      <p>
+        Accès, rectification, effacement, limitation, opposition,
+        portabilité. Contact :
+        <a href="mailto:support@nounouma.fr">support@nounouma.fr</a>
+      </p>
+
+      <h2 id="ia">4. Rédaction de documents par intelligence artificielle</h2>
+      <p>
+        Certaines fonctionnalités de Nounouma — le projet d'accueil et les
+        observations du développement — rédigent un document à partir des
+        informations que vous avez saisies. Cette rédaction est effectuée par
+        un prestataire technique d'intelligence artificielle agissant pour
+        notre compte, en qualité de sous-traitant au sens de l'article 28 du
+        RGPD.
+      </p>
+
+      <h3>Ce qui est transmis</h3>
+      <p>
+        Le contenu que vous avez renseigné et qui figurera dans le document :
+        votre présentation professionnelle, la description de votre accueil,
+        et, pour un projet personnalisé, les informations relatives à l'enfant
+        concerné — prénom et nom, âge, habitudes, besoins particuliers,
+        allergies, contacts d'urgence avec leur lien de parenté et leur numéro
+        de téléphone — ainsi que les coordonnées de l'assistante maternelle et
+        du parent référent. Ces informations vous ont été confiées par les
+        parents pour l'accueil de leur enfant et figurent, par nature, dans le
+        document remis.
+      </p>
+
+      <h3>À qui</h3>
+      <p>
+        Trois prestataires sont appelés dans cet ordre, jusqu'à ce que l'un
+        réponde : <strong>OpenAI</strong>, puis <strong>Groq</strong>, puis
+        <strong>Hugging Face</strong>. Un même document peut donc être traité
+        par l'un ou par l'autre, selon la disponibilité du service au moment de
+        la demande. Le traitement peut avoir lieu en dehors de l'Union
+        européenne ; ces transferts s'appuient sur les clauses contractuelles
+        types de la Commission européenne.
+      </p>
+
+      <h3>Pour quoi faire</h3>
+      <p>
+        Uniquement produire le document demandé. Les prestataires n'utilisent
+        pas ces contenus pour entraîner leurs modèles, conformément à leurs
+        conditions d'utilisation professionnelles.
+      </p>
+
+      <h3>Combien de temps</h3>
+      <p>
+        Le document produit est conservé dans votre espace jusqu'à ce que vous
+        le supprimiez : chaque document peut être supprimé depuis la liste de
+        vos projets. Le contenu transmis n'est pas conservé par Nounouma
+        au-delà de la rédaction.
+      </p>
+
+      <h3>Ce que vous pouvez faire</h3>
+      <div class="encadre">
+        <p>
+          Dans l'application, la rédaction assistée est <strong>le seul
+          moyen</strong> de produire ces documents : demander un projet
+          d'accueil ou une observation implique la transmission décrite
+          ci-dessus. Vous restez libre de ne pas utiliser ces fonctionnalités,
+          et vous relisez le document avant tout partage.
+        </p>
+      </div>
+      <p>
+        Pour toute question ou demande relative à vos données, écrivez à
+        <a href="mailto:support@nounouma.fr">support@nounouma.fr</a>.
+      </p>
+
+      <h2 id="parents">5. Information des parents</h2>
+      <p>
+        Les informations relatives à votre enfant que vous confiez à
+        l'assistante maternelle via Nounouma — prénom et nom, âge, habitudes,
+        besoins particuliers, allergies, contacts d'urgence — peuvent être
+        traitées dans le cadre décrit au point 4, lorsque l'assistante
+        maternelle demande la rédaction d'un projet d'accueil personnalisé ou
+        d'une observation du développement. Vous disposez sur ces données des
+        mêmes droits qu'au point 3.
+      </p>
+
+      <h2 id="suppression">6. Suppression de votre compte</h2>
+      <p>
+        Vous pouvez supprimer votre compte vous-même, depuis l'application. Le
+        détail de ce qui est effacé, de ce qui est conservé et du délai dont
+        vous disposez pour revenir sur votre décision figure sur la page
+        <a href="/suppression-compte/">Suppression de compte</a>.
+      </p>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="contenant">
+      <p>
+        Contact :
+        <a href="mailto:support@nounouma.fr">support@nounouma.fr</a>
+      </p>
+      <p class="liens-pied">
+        <a href="/">Accueil</a>
+        <a href="/suppression-compte/">Suppression de compte</a>
+        <a href="/#cgu">CGU</a>
+        <a href="/#cgv">CGV</a>
+      </p>
+      <p style="color:#718096">© 2026 Nounouma — Tous droits réservés</p>
+    </div>
+  </footer>
+
+</body>
+</html>
